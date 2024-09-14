@@ -21,6 +21,7 @@ services:
 
   # Service for loading database fixtures.
   db-fixture-rest-api:
+    platform: linux/amd64
     image: db-fixture-rest-api
     build: 
       context: ./db-fixture-rest-api
@@ -39,6 +40,7 @@ services:
     restart: always
 
   gateway:
+    platform: linux/amd64
     image: gateway
     build: 
       context: ./gateway
@@ -59,6 +61,7 @@ services:
     restart: "no"
 
   video-streaming:
+    platform: linux/amd64
     image: video-streaming
     build: 
       context: ./video-streaming
@@ -79,6 +82,7 @@ services:
     restart: "no"
 
   video-upload:
+    platform: linux/amd64
     image: video-upload
     build: 
       context: ./video-upload
@@ -99,6 +103,7 @@ services:
     restart: "no"
 
   history:
+    platform: linux/amd64
     image: history
     build: 
       context: ./history
@@ -149,6 +154,7 @@ services:
   # local testing easier.
   #
   video-storage:
+    platform: linux/amd64
     image: mock-storage
     build: 
       context: ./mock-storage
@@ -165,6 +171,7 @@ services:
     restart: "no"
 
   metadata:
+    platform: linux/amd64
     image: metadata
     build: 
       context: ./metadata
